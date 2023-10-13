@@ -1,0 +1,21 @@
+h1 {
+    color: blueviolet;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(9, 9, 121, 1) 50%);
+}
+
+ul {
+    background-color: black;
+    opacity: 0.6;
+    color: blueviolet;
+}
+
+p {
+    color: green;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(9, 9, 121, 1) 50%);
+}
+
+body {
+    background-image: url(https://www.mbofselma.com/wp-content/themes/DealerInspireDealerTheme/images/service-bg.jpg);
+}
