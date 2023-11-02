@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/bluejordan.jpg">
+
+    <style>
+        body {
+            display: flex;
+            gap: 1rem;
+            background-color: rgb(163, 37, 37);
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-family: Nosifer;
+        }
+
+        .card {
+            width: 20em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 1rem;
+            border-radius: 15px;
+            color: black;
+            background-color: white;
+            border: 3px solid black;
+            font-family: inherit;
+        }
+
+        .product-image {
+            width: 100%;
+        }
+
+        .product-title {
+            margin-bottom: 0;
+        }
+
+        .product-description {
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .bottom {
+            display: flex;
+            gap: 1rem;
+            align-self: stretch;
+            margin-top: auto;
+        }
+
+        .bottom img {
+            width: 1.5rem;
+        }
+
+        .buy-button {
+            flex-grow: 1;
+            align-self: stretch;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 0.5rem;
+            font-family: Nosifer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img class="product-image" src="images/jordan.png" alt="">
+        <h2 class="product-title">Nike X OFF-White</h2>
+        <p class="product-description">The 10: Air Jordan 1 off-white - Chicago</p>
+        <span class="product-price">€3,916</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="product-image" src="images/bluejordan.png" alt="">
+        <h2 class="product-title">Nike X OFF-White</h2>
+        <p class="product-description">The 10: Air Jordan 1 off-white - University blue</p>
+        <span class="product-price">€1,416</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="product-image" src="images/yellowjordan.png" alt="">
+        <h2 class="product-title">Nike X OFF-White</h2>
+        <p class="product-description">The 10: Air Jordan 1 off-white - Canary Yellow</p>
+        <span class="product-price">€1,733</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="product-image" src="images/whitejordan.png" alt="">
+        <h2 class="product-title">Nike X OFF-White</h2>
+        <p class="product-description">The 10: Air Jordan 1 off-white - Euro </p>
+        <span class="product-price">€5,313</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="product-image" src="images/jordan4.png" alt="">
+        <h2 class="product-title">Jordan 4</h2>
+        <p class="product-description">Jordan 4 Retro University Blue</p>
+        <span class="product-price">€542</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="product-image" src="images/redjordan4.png" alt="">
+        <h2 class="product-title">Jordan 4</h2>
+        <p class="product-description">Jordan 4 Retro Fire Red</p>
+        <span class="product-price">€365</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="product-image" src="images/neonjordan4.png" alt="">
+        <h2 class="product-title">Jordan 4</h2>
+        <p class="product-description">Jordan 4 Retro Neon</p>
+        <span class="product-price">€377</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="product-image" src="images/blackjordan4.png" alt="">
+        <h2 class="product-title">Jordan 4</h2>
+        <p class="product-description">Jordan 4 Retro Black Cat</p>
+        <span class="product-price">€708</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+    <div class="card">
+        <img class="product-image" src="images/jordan11.png" alt="">
+        <h2 class="product-title">Jordan 11</h2>
+        <p class="product-description">Jordan 11 Retro Gamma Blue</p>
+        <span class="product-price">€566</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="product-image" src="images/purplejordan.png" alt="">
+        <h2 class="product-title">Nike X OFF-White</h2>
+        <p class="product-description">The 10: Air Jordan 1 off-white - Court Purple</p>
+        <span class="product-price">€1566</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="product-image" src="images/jordan13.png" alt="">
+        <h2 class="product-title">Jordan 13</h2>
+        <p class="product-description">Jordan 13 Retro Black Cat</p>
+        <span class="product-price">€378</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="product-image" src="images/jordan6.png" alt="">
+        <h2 class="product-title">Jordan 6</h2>
+        <p class="product-description">Jordan 6 Retro Travis Scott British Khaki</p>
+        <span class="product-price">€284</span>
+        <div class="bottom">
+            <button class="buy-button">Buy Now</button>
+            <button class="favorite-button"><img src="star.svg" alt=""></button>
+        </div>
+    </div>
+
+</body>
+
+</html>
