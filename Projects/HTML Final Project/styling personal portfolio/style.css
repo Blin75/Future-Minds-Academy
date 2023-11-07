@@ -2,39 +2,33 @@ body {
     background-image: url(https://wallpapers.com/images/featured/pattern-4u7ed6koskqhcez1.jpg);
     cursor: url(Images/rocket-svgrepo-com.svg) 40 10, auto;
     font-family: Nosifer;
-
     margin: 1em 10% 0 10%;
+    color: white;
+
 }
 
-.firstsection {
-    text-align: center;
+a,
+li {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    cursor: inherit;
+}
+
+a {
+    color: blueviolet;
+}
+
+.card {
     background: rgb(46, 165, 206);
     background: linear-gradient(90deg, rgba(46, 165, 206, 1) 33%, rgba(14, 0, 173, 1) 68%);
     border-radius: 10px;
     border: 3px solid transparent;
+    margin: 2rem 0;
+    text-align: center;
 }
 
-.firstsection:hover {
-    border: 3px solid white;
-}
-
-.myprojects:hover {
-    border: 3px solid white;
-}
-
-.education:hover {
-    border: 3px solid white;
-}
-
-.grades:hover {
-    border: 3px solid white;
-}
-
-.description:hover {
-    border: 3px solid white;
-}
-
-.lastsection:hover {
+section:hover {
     border: 3px solid white;
 }
 
@@ -55,59 +49,17 @@ nav {
     text-align: center;
 }
 
-.myprojects {
-    text-align: center;
-    background: rgb(46, 165, 206);
-    background: linear-gradient(90deg, rgba(46, 165, 206, 1) 33%, rgba(14, 0, 173, 1) 68%);
-    border-radius: 10px;
-    border: 3px solid transparent;
-}
-
 .unorderedlist {
     padding: 0px;
-}
-
-
-.education {
-    background: rgb(46, 165, 206);
-    background: linear-gradient(90deg, rgba(46, 165, 206, 1) 33%, rgba(14, 0, 173, 1) 68%);
-    border: 3px solid transparent;
-    border-radius: 20px;
-    list-style-type: none;
-    padding: 2%;
-    color: #C5C6C7;
-}
-
-.grades {
-    background: rgb(46, 165, 206);
-    background: linear-gradient(90deg, rgba(46, 165, 206, 1) 33%, rgba(14, 0, 173, 1) 68%);
-    border-radius: 10px;
-    border: 3px solid transparent;
 }
 
 .firstrow {
     background-color: gray;
 }
 
-.links {
-    color: white;
-}
-
-a {
-    color: black;
-    cursor: inherit;
-    text-decoration: none;
-}
-
 .unorderedlist li {
     display: inline;
 }
-
-.secondsection {
-    background: rgb(206, 46, 46);
-    background: linear-gradient(90deg, rgba(206, 46, 46, 1) 33%, rgba(0, 9, 173, 1) 68%);
-}
-
 
 input {
     background-color: black;
@@ -126,24 +78,9 @@ textarea {
     cursor: inherit;
 }
 
-.lastsection,
-.description {
-    text-align: center;
-    background: rgb(46, 165, 206);
-    background: linear-gradient(90deg, rgba(46, 165, 206, 1) 33%, rgba(14, 0, 173, 1) 68%);
-    border-radius: 10px;
-    border: 3px solid transparent;
-    width: fit-content;
-    margin: auto;
-    font: inherit;
-}
-
 footer {
-    color: white;
     text-align: center;
 }
-
-
 
 table,
 th,
@@ -151,15 +88,6 @@ td {
     border: 3px inset black;
     margin: auto;
     text-align: center;
-}
-
-
-p,
-li,
-th,
-td,
-a {
-    color: white;
 }
 
 h1 {

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: auto;
+            border: 5px solid black;
+            border-radius: 15px;
+            padding: 2rem;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        h2,
+        p {
+            margin: 0;
+        }
+
+        .information {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .status-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: nowrap;
+            overflow: scroll;
+            font-family: Nosifer;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+
+        .online {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: green;
+            border: solid black 2px;
+            flex-shrink: 0;
+        }
+
+        .offline {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: red;
+            border: solid black 2px;
+            flex-shrink: 0;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Bungee+Shade&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="status-container">
+        <div class="card">
+            <div class="information">
+                <h2>Filan Fisteku</h1>
+                    <p>Programer ne Fma </p>
+            </div>
+            <div class="online"></div>
+        </div>
+        <div class="card">
+            <div class="information">
+                <h2>Filan Fisteku</h1>
+                    <p>Programer ne Fma </p>
+            </div>
+            <div class="offline"></div>
+        </div>
+        <div class="card">
+            <div class="information">
+                <h2>Filan Fisteku</h1>
+                    <p>Programer ne Fma </p>
+            </div>
+            <div class="online"></div>
+        </div>
+        <div class="card">
+            <div class="information">
+                <h2>Filan Fisteku</h1>
+                    <p>Programer ne Fma </p>
+            </div>
+            <div class="offline"></div>
+        </div>
+        <div class="card">
+            <div class="information">
+                <h2>Filan Fisteku</h1>
+                    <p>Programer ne Fma </p>
+            </div>
+            <div class="online"></div>
+        </div>
+        <div class="card">
+            <div class="information">
+                <h2>Filan Fisteku</h1>
+                    <p>Programer ne Fma </p>
+            </div>
+            <div class="offline"></div>
+        </div>
+        <div class="card">
+            <div class="information">
+                <h2>Filan Fisteku</h1>
+                    <p>Programer ne Fma </p>
+            </div>
+            <div class="online"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
