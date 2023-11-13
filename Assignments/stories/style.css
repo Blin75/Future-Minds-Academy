@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     width: 100vw;
+    background-color: rgb(255, 255, 255);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
@@ -16,6 +17,7 @@ body {
     overflow-x: scroll;
     box-shadow: inset 0px 0px 20px 0px #ababab;
     border-radius: 20px;
+
 }
 
 .story {
@@ -43,7 +45,7 @@ body {
     left: 10px;
     border-radius: 50%;
     background-size: cover;
-    border: 4px solid blue;
+    border: 4px solid rgb(24, 119, 242);
     background-color: white;
 }
 
@@ -74,4 +76,53 @@ body {
     margin-bottom: 5px;
     margin-left: 10px;
     color: white;
+}
+
+h1 {
+    background-color: rgb(24, 119, 242);
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 4rem;
+}
+
+
+.scrollbar {
+    overflow: overlay;
+    scrollbar-gutter: stable;
+}
+
+
+.scrollbar::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0);
+    width: 16px;
+    height: 16px;
+    z-index: 999999;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 16px;
+    border: 0px solid #fff;
+}
+
+
+.scrollbar::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+.scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: #a0a0a5;
+    border: 4px solid #fff;
+}
+
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #a0a0a5;
+    border: 4px solid rgb(24, 119, 242);
 }
