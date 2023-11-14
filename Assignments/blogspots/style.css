@@ -15,7 +15,22 @@ body {
     align-items: center;
     text-align: right;
     padding: 25px;
+    height: 100vh;
 
+}
+
+.pinned {
+    width: 100%;
+    padding: 30px;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow-y: scroll;
+}
+
+.javascript {
+    background-color: red;
+    color: white;
+    padding: 2px;
 }
 
 img {
@@ -58,13 +73,7 @@ button {
     padding: 2px;
 }
 
-.pinned {
-    width: 100%;
-    padding: 50px;
 
-    justify-content: space-between;
-    flex-direction: row;
-}
 
 .name {
     color: blue;
