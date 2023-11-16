@@ -5,6 +5,10 @@ body {
     overflow-x: hidden;
 }
 
+.main {
+    padding: 50px;
+}
+
 .left {
     background-color: gray;
     color: white;
@@ -32,6 +36,8 @@ body {
 
 img {
     width: 50px;
+    float: inline-end;
+    border-radius: 80%;
 }
 
 p {
@@ -56,6 +62,11 @@ button {
     text-align: center;
     display: flex;
     justify-content: center;
+}
+
+button:hover {
+    background-color: white;
+    color: gray;
 }
 
 .css {
