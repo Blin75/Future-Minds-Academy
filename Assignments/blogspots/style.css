@@ -16,15 +16,12 @@ body {
     text-align: right;
     padding: 25px;
     height: 100vh;
-
+    flex-wrap: nowrap;
 }
 
 .pinned {
     width: 100%;
     padding: 30px;
-    justify-content: space-between;
-    flex-direction: row;
-    overflow-y: scroll;
 }
 
 .javascript {
