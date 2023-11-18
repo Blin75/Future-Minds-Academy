@@ -19,8 +19,7 @@ body {
     align-items: center;
     text-align: right;
     padding: 25px;
-    height: 100vh;
-    flex-wrap: nowrap;
+    min-height: 100vh;
 }
 
 .pinned {
