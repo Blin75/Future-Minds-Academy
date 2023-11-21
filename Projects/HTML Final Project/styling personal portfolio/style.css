@@ -1,3 +1,23 @@
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+
+* {
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
 body {
     background-image: url(https://wallpapers.com/images/featured/pattern-4u7ed6koskqhcez1.jpg);
     cursor: url(Images/rocket-svgrepo-com.svg) 40 10, auto;

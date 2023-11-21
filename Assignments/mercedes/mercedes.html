@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brabus</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.webp">
+    <style>
+        body {
+            margin: 0;
+            padding: 2em;
+            background: rgb(246, 95, 8);
+            background: linear-gradient(90deg, rgba(246, 95, 8, 1) 17%, rgba(0, 0, 0, 1) 46%, rgba(219, 91, 32, 1) 79%);
+            display: flex;
+            justify-content: flex-start;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 2em;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 600px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: white;
+            border-radius: 10px;
+            padding: 2em 1em 2em 1em;
+            display: flex;
+            gap: 1em;
+            box-shadow: 0px 0px 2px 9px grey;
+        }
+
+        .card-left {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 250px;
+            align-self: center;
+        }
+
+        .sizes-container {
+            justify-self: flex-end;
+            display: flex;
+            flex-direction: column;
+            color: aqua;
+            gap: 0.2em;
+        }
+
+        .sizes {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.5em;
+            flex-wrap: wrap;
+        }
+
+        .size-label {
+            text-transform: uppercase;
+        }
+
+        .size {
+            flex-grow: 0;
+            width: 1.8em;
+            height: 1.8em;
+            border: 1px solid aqua;
+            font-size: 1.1em;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .size:hover {
+            color: white;
+            background-color: aqua;
+        }
+
+        .card-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-category {
+            text-transform: uppercase;
+            color: rgb(255, 94, 0);
+            font-size: 0.8em;
+        }
+
+        .product-title {
+            text-transform: uppercase;
+            color: black;
+            font-size: 2em;
+        }
+
+        .product-price {
+            color: rgb(255, 94, 0);
+            font-size: 2.5em;
+        }
+
+        .product-description {
+            text-align: start;
+            line-break: anywhere;
+            flex-grow: 2;
+            word-spacing: 5px;
+        }
+
+        .finalize {
+            display: flex;
+            gap: 5px;
+        }
+
+        .add-to-cart-button,
+        .dropdown-button {
+            text-transform: uppercase;
+            background: rgb(246, 95, 8);
+            background: linear-gradient(180deg, rgba(246, 95, 8, 1) 17%, rgba(0, 0, 0, 1) 46%, rgba(219, 91, 32, 1) 79%);
+            border-radius: unset;
+            border: none;
+            color: white;
+            font-size: 1em;
+            padding: 0.5em 0 0.5em 0;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .add-to-cart-button {
+            flex-grow: 1;
+        }
+
+        .dropdown-button {
+            padding: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-left">
+            <img src="images/g class.jpg" alt="A picture of a nike shoe">
+            <img src="images/g class interior.jpg" alt="">
+            <div class="sizes-container">
+
+                <div class="sizes">
+                </div>
+            </div>
+        </div>
+        <div class="card-right">
+            <span class="product-category">BRABUS ROCKET EDITION</span>
+            <span class="product-title">BRABUS 900 ROCKET EDITION - "1 OF 25"</span>
+            <span class="product-price">$631,890</span>
+            <p class="product-description">
+                BRABUS 900 Rocket Edition, we are expanding our Rocket product program by combining the
+                performance of the Mercedes-Benz G-Class in
+                signature BRABUS fashion.BRABUS
+                Masterpiece interior and the latest in cutting-edge performance courtesy of the 4.5 liter BRABUS 900
+                twin-turbocharged V8 engine producing its namesake 662 kW / 900 hp.
+            </p>
+            <div class="finalize">
+                <button class="add-to-cart-button">add to card</button>
+                <button class="dropdown-button">&#11015;</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="card">
+        <div class="card-left">
+            <img src="images/gle.jpg" alt="A picture of a nike shoe">
+            <img src="images/gle interior.jpg" alt="">
+            <div class="sizes-container">
+            </div>
+        </div>
+        <div class="card-right">
+            <span class="product-category">BRABUS ROCKET EDITION</span>
+            <span class="product-title"> THE BRABUS ROCKET SHIP - "1 OF 25"</span>
+            <span class="product-price">$447,322</span>
+            <p class="product-description">
+                BRABUS 900 Rocket Edition, based on the Mercedes-Benz GLE 63 S 4MATIC Coupe is the latest in
+                our range of fully equipped rocket ships. It is the world’s fastest SUV, The 4.5-liter BRABUS 900 twin
+                turbocharged V8 engine produces its namesake 662
+                kW / 900 hp.
+                The BRABUS 900 Rocket Edition is ready for any adventure in and beyond our solar system!
+            </p>
+            <div class="finalize">
+                <button class="add-to-cart-button">add to card</button>
+                <button class="dropdown-button">&#11015;</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="card">
+        <div class="card-left">
+            <img src="images/gt.avif" alt="A picture of a nike shoe">
+            <img src="images/gt interior.jpg" alt="">
+            <div class="sizes-container">
+            </div>
+        </div>
+        <div class="card-right">
+            <span class="product-category">BRABUS ROCKET EDITION</span>
+            <span class="product-title">BRABUS GT ROCKET 900 "ONE OF TEN"</span>
+            <span class="product-price">$628,000</span>
+            <p class="product-description">
+                BRABUS ROCKET 900 "ONE OF TEN." A limited edition of just ten vehicles of this model will be built in
+                the high-end BRABUS Manufaktur in Bottrop based on the GT 63 S 4MATIC+.
+                At the heart of this BRABUS top-of-the-line automobile is the new BRABUS ROCKET 900 Biturbo V8
+                increased-displacement engine, which thanks to the displacement increase to 4.5 liters and a new
+                high-performance forced- induction system delivers a peak output of 662 kW / 900 hp (888 bhp).
+            </p>
+            <div class="finalize">
+                <button class="add-to-cart-button">add to card</button>
+                <button class="dropdown-button">&#11015;</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="card">
+        <div class="card-left">
+            <img src="images/p900.webp" alt="A picture of a nike shoe">
+            <img src="images/p 900 interior.jpeg" alt="">
+            <div class="sizes-container">
+            </div>
+        </div>
+        <div class="card-right">
+            <span class="product-category">BRABUS ROCKET EDITION</span>
+            <span class="product-title">BRABUS P 900 ROCKET EDITION "ONE OF TEN"</span>
+            <span class="product-price">$628,000</span>
+            <p class="product-description">
+                For the first time ever, this hallmark design features the BRABUS “PowerView” hood, designed to offer a
+                direct view of the twin-turbocharged V8 engine. The upgraded carbon fender flares as well as the BRABUS
+                rear diffuser, likewise complete with accentuating side flaps, round off the BRABUS P 900 Rocket
+                Edition’s incomparable identity in typical BRABUS fashion while ensuring a next-level rocket ship flair.
+            </p>
+            <div class="finalize">
+                <button class="add-to-cart-button">add to card</button>
+                <button class="dropdown-button">&#11015;</button>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+
+    </div>
+
+    </div>
+</body>
+
+</html>

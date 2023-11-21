@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        @keyframes show {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+        }
+
+        * {
+            opacity: 0;
+            animation-name: show;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>I am the title</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ratione quibusdam officia eos maxime dignissimos
+        officiis reiciendis voluptates corrupti accusamus ipsam, iusto ex sapiente, voluptatum a error aliquid, minima
+        fugiat.</p>
+    <img src="images/jordan11.png" alt="">
+</body>
+
+</html>

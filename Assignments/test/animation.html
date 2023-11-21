@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        @keyframes open-curtain {
+            from {
+                width: 50vw;
+                opacity: 1;
+                filter: blur(0px);
+            }
+
+            to {
+                width: 0;
+                opacity: 0.3;
+                filter: blur(10px);
+            }
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .curtain {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 50vw;
+            background-color: blue;
+            animation-name: open-curtain;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        #left-curtain {
+            left: 0;
+        }
+
+        #right-curtain {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="curtain" id="left-curtain"></div>
+    <div class="curtain" id="right-curtain"></div>
+    <h1>I am the title</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ratione quibusdam officia eos maxime dignissimos
+        officiis reiciendis voluptates corrupti accusamus ipsam, iusto ex sapiente, voluptatum a error aliquid, minima
+        fugiat.</p>
+    <img src="images/jordan11.png" alt="">
+</body>
+
+</html>
