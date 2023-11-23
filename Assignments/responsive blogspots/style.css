@@ -1,0 +1,107 @@
+@media(min-width: 600px) {
+    body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto 1fr;
+    }
+
+    .left {
+        background-color: grey;
+        padding: 1rem;
+        width: min-content;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        padding: 5rem;
+        padding-top: 11rem;
+    }
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.left {
+    background-color: grey;
+    padding: 1rem;
+    width: min-content;
+    grid-column: 1 / 2;
+    padding: 5rem;
+    padding-top: 11rem;
+}
+
+.pinned {
+    width: 100%;
+    padding: 30px;
+}
+
+.javascript {
+    background-color: red;
+    color: white;
+    padding: 2px;
+}
+
+img {
+    width: 50px;
+    float: inline-end;
+    border-radius: 80%;
+}
+
+p {
+    width: 70%;
+}
+
+.blog {
+    display: block;
+}
+
+.break {
+    display: block;
+}
+
+button {
+    width: 50%;
+    background-color: gray;
+    color: white;
+    border: 1px solid white;
+    margin: 1px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: white;
+    color: gray;
+}
+
+.css {
+    background-color: green;
+    color: white;
+    padding: 2px;
+}
+
+.html {
+    background-color: blue;
+    color: white;
+    padding: 2px;
+}
+
+.name {
+    color: blue;
+}
+
+.main {
+    overflow-y: scroll;
+}
