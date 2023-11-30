@@ -55,6 +55,7 @@ body {
 .asideListItems:hover:not(.logo, .active) {
     background-color: rgba(128, 128, 128, 0.5);
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .avatar {
