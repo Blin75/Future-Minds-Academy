@@ -37,7 +37,7 @@ input:focus+label {
 }
 
 button {
-    width: 20%;
+    width: min-content;
     padding: 0.5rem;
     background-color: rgb(88, 43, 166);
     color: white;
@@ -47,7 +47,6 @@ img {
     width: 30px;
     align-self: flex-end;
     margin-top: -40px;
-    padding-bottom: 0.5rem;
     animation-name: rotate;
     animation-duration: 1s;
     animation-iteration-count: infinite;

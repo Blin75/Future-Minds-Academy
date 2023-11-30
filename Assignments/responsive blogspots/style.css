@@ -1,25 +1,3 @@
-@media(min-width: 600px) {
-    body {
-        margin: 0;
-        height: 100vh;
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: auto 1fr;
-    }
-
-    .left {
-        background-color: grey;
-        padding: 1rem;
-        width: min-content;
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        padding: 5rem;
-        padding-top: 11rem;
-    }
-}
-
-
-
 * {
     box-sizing: border-box;
 }
@@ -104,4 +82,29 @@ button:hover {
 
 .main {
     overflow-y: scroll;
+}
+
+@media(max-width: 600px) {
+    body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        background-color: grey;
+        padding: 1rem;
+        width: auto;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        padding: 5rem;
+        padding-top: 11rem;
+    }
+
+    .main {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
 }
