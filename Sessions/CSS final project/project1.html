@@ -97,6 +97,13 @@
                 <div class="notifications">
                     <span title="Notifications" class="material-symbols-outlined">notifications </span>
                     <span class="notificationNumber">5</span>
+                    <div class="notificationMsg">
+                        <p>John Doe sent a message</p>
+                        <p>Someone wiewed your profile</p>
+                        <p>John Doe sent a message</p>
+                        <p>Someone wiewed your profile</p>
+                        <p>Another notification</p>
+                    </div>
                 </div>
                 <span title="Dashboard" class="material-symbols-outlined">person</span>
             </div>
@@ -104,42 +111,48 @@
 
         <main>
             <div class="global marginY20">
-                <div>
+                <div class="cardHeader">
                     <span class="material-symbols-outlined globalImg">language</span>
                     <h1>Global Sales by Top Locations</h1>
-
-
+                </div>
+                <div class="mapAndTable">
                     <table>
                         <tr>
                             <td><img class="imgSvg" src="https://flagicons.lipis.dev/flags/4x3/us.svg" alt=""></td>
-                            <td> USA 2.920 53.23%</td>
+                            <td> USA </td>
+                            <td>2.920 53.23%</td>
                         </tr>
                         <tr>
                             <td><img class="imgSvg" src="https://flagicons.lipis.dev/flags/4x3/de.svg" alt=""></td>
-                            <td>Germany 1.300 4.34%</td>
+                            <td>Germany</td>
+                            <td>1.300 4.34%</td>
                         </tr>
                         <tr>
                             <td><img class="imgSvg" src="https://flagicons.lipis.dev/flags/4x3/au.svg" alt=""></td>
-                            <td>Australia 760 20.43%</td>
+                            <td>Australia </td>
+                            <td>760 20.43%</td>
                         </tr>
                         <tr>
                             <td><img class="imgSvg" src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt=""></td>
-                            <td>United Kingdom 600 10.35%</td>
+                            <td>United Kingdom </td>
+                            <td>600 10.35%</td>
                         </tr>
                         <tr>
                             <td><img class="imgSvg" src="https://flagicons.lipis.dev/flags/4x3/ro.svg" alt=""></td>
-                            <td>Romania 600 7.87%</td>
+                            <td>Romania </td>
+                            <td>600 7.87%</td>
                         </tr>
                         <tr>
                             <td><img class="imgSvg" src="https://flagicons.lipis.dev/flags/4x3/br.svg" alt=""></td>
-                            <td>Brasil 550 5.94%</td>
+                            <td>Brasil </td>
+                            <td>550 5.94%</td>
                         </tr>
                     </table>
-                </div>
-                <div>
+
+
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5885.949994135927!2d21.450431694022235!3d42.47082045100634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13548d5380a9cc83%3A0x358ec4443b2875c1!2sKIMI%20-%20Caf%C3%A8%20%26%20Cake%20House!5e0!3m2!1sen!2s!4v1701359685978!5m2!1sen!2s"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
@@ -216,8 +229,91 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <h1>Manage Listings</h1>
+            <div class="listing">
 
+                <div class="listingCard padding1rem">
+                    <div class="listingCardHover">
+
+                        <img class="listingCardImage" src="images/card-1.jpeg" alt="">
+                        <div class="listingCardIcon">
+                            <span class="material-symbols-outlined imageIcon">image</span>
+                            <span class="material-symbols-outlined editIcon">edit</span>
+                            <span class="material-symbols-outlined closeIcon">close</span>
+                        </div>
+                    </div>
+                    <h2>Cozy 5 Stars Apartment</h2>
+
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laboriosam magnam eos vero quis?
+                            Odit maxime magni dicta quas iste, doloribus fugiat esse aut amet ab consectetur beatae
+                            sapiente itaque!</p>
+                        <hr>
+                        <div class="listingCardText displayFlex alignItemsCenter justfycContentSpaceBetween">
+                            <h3>$899/Night</h3>
+                            <div class="displayFlex alignItemsCenter colorGray ">
+                                <span class="material-symbols-outlined">location_on</span>
+                                <p>Barcelona, Spain</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listingCard padding1rem">
+                    <div class="listingCardHover">
+
+                        <img class="listingCardImage" src="images/card-2.jpeg" alt="">
+                        <div class="listingCardIcon">
+                            <span class="material-symbols-outlined imageIcon">image</span>
+                            <span class="material-symbols-outlined editIcon">edit</span>
+                            <span class="material-symbols-outlined closeIcon">close</span>
+                        </div>
+                    </div>
+                    <h2>Office Studio</h2>
+
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laboriosam magnam eos vero quis?
+                            Odit maxime magni dicta quas iste, doloribus fugiat esse aut amet ab consectetur beatae
+                            sapiente itaque!</p>
+                        <hr>
+                        <div class="listingCardText displayFlex alignItemsCenter justfycContentSpaceBetween">
+                            <h3>$1,119/Night</h3>
+                            <div class="displayFlex alignItemsCenter colorGray ">
+                                <span class="material-symbols-outlined">location_on</span>
+                                <p>London, UK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listingCard padding1rem">
+                    <div class="listingCardHover">
+
+                        <img class="listingCardImage" src="images/card-3.jpeg" alt="">
+                        <div class="listingCardIcon">
+                            <span class="material-symbols-outlined imageIcon">image</span>
+                            <span class="material-symbols-outlined editIcon">edit</span>
+                            <span class="material-symbols-outlined closeIcon">close</span>
+                        </div>
+                    </div>
+                    <h2>Beautiful Castle</h2>
+
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laboriosam magnam eos vero quis?
+                            Odit maxime magni dicta quas iste, doloribus fugiat esse aut amet ab consectetur beatae
+                            sapiente itaque!</p>
+                        <hr>
+                        <div class="listingCardText displayFlex alignItemsCenter justfycContentSpaceBetween">
+                            <h3>$459/Night</h3>
+                            <div class="displayFlex alignItemsCenter colorGray">
+                                <span class="material-symbols-outlined">location_on</span>
+                                <p>Milan, Italy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <footer></footer>
