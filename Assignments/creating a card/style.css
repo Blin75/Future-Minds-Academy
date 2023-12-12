@@ -21,12 +21,14 @@
     border: 1px solid black;
 }
 
-p {
-    font-weight: 400;
+.cardImg {
     position: relative;
-    margin-bottom: -50px;
+}
+
+p {
     display: flex;
+    position: absolute;
     flex-direction: column;
-    padding: 0;
+    font-weight: 400;
     color: white;
 }
