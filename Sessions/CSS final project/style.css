@@ -73,6 +73,10 @@ iframe {
     cursor: pointer;
 }
 
+.gap4rem {
+    gap: .4rem;
+}
+
 /* Aside */
 .leftContainer {
     background-image: url(images/sidebar-1.jpg);
@@ -91,6 +95,7 @@ iframe {
     align-items: center;
     padding: 0.2rem;
     margin: 0.5rem;
+    gap: 0.4rem;
 }
 
 .active {
@@ -121,7 +126,6 @@ iframe {
 .circle:hover {
     box-shadow: 0px 0px 10px 1px #808080d6;
 }
-
 
 .asideListItems:hover:not(.logo, .active, .avatarSec) {
     background-color: rgba(128, 128, 128, 0.5);
@@ -184,6 +188,15 @@ tr {
     justify-content: space-between;
 }
 
+tr:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    margin: 0;
+}
+
+
 .listingCard {
     background-color: white;
     display: flex;
@@ -204,16 +217,19 @@ tr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: translateY(-30px);
+    transition: transform .3s cubic-bezier(.34, 1.61, .7, 1);
 }
 
 .listingCardHover:hover .listingCardImage {
-    transform: translateY(-20px);
+    transform: translateY(-46px);
     transition: .1s, delay .4s;
 }
 
 .listingCardIcon {
     display: flex;
     justify-content: space-between;
+    gap: 0.3rem;
     visibility: hidden;
 }
 
@@ -301,8 +317,8 @@ tr {
 .notificationMsg {
     display: none;
     background-color: white;
-    padding: 0.5rem;
     width: 17rem;
+    box-shadow: 0px 0px 10px 1px #808080d6;
 }
 
 .notificationMsg p {
@@ -343,11 +359,24 @@ input {
     border-bottom: 3px solid grey;
     width: 10rem;
     padding-bottom: 0.5rem;
+    transition: border-bottom 0.2s ease-in-out;
 }
 
 input:focus {
     background: none;
     border-bottom: 3px solid purple;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerText {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
 }
 
 @media(max-width:1000px) {
