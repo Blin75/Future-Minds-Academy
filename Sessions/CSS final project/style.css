@@ -93,9 +93,9 @@ iframe {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    padding: 0.2rem;
+    padding: 0.3rem;
     margin: 0.5rem;
-    gap: 0.4rem;
+    gap: 0.7rem;
 }
 
 .active {
@@ -195,7 +195,6 @@ tr:last-child {
 h2 {
     margin: 0;
 }
-
 
 .listingCard {
     background-color: white;
@@ -413,7 +412,13 @@ input:focus {
     .listing {
         grid-template-columns: 1fr;
     }
+
+    .listingCard {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
+
 
 @media (max-width:700px) {
 
