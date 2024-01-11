@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let answer = Math.floor(Math.random() * 6 + 1);
+
+        let guess = parseFloat(prompt('Write a random number fro 1 to 6'));
+        if (guess >= 1 && guess <= 6) {
+            if (answer == guess) {
+                alert('Congratulations you have matched dhe number')
+            }
+
+            else {
+                alert(`The correct number was ${answer}, more luck next time `)
+            }
+        }
+
+        else {
+            alert('error');
+        }
+
+
+    </script>
+</body>
+
+</html>
