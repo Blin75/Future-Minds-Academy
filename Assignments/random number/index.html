@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .firstPlayer {
+            background-color: green;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px
+        }
+
+        .secondPlayer {
+            background-color: red;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px
+        }
+
+        .numbers {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        .loser {
+            background-color: red;
+        }
+
+        .winner {
+            background-color: green;
+        }
+
+        .tie {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div id="answer">
+            <h1>The correct answer is 8</h1>
+        </div>
+        <div class="numbers">
+            <div class="firstPlayer">
+                <div> Player 1</div>
+                <div id="firstNumber">6</div>
+            </div>
+            <div class="secondPlayer">
+                <div>Player 2</div>
+                <div id="secondNumber"> 8</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //input
+
+        let number = Math.floor(Math.random() * 10) + 1;
+
+
+        let firstPlayer = parseInt(prompt('Write your number'));
+        let secondPlayer = parseInt(prompt('Write your number'));
+
+
+        let result1 = Math.abs(firstPlayer - number)
+        let result2 = Math.abs(secondPlayer - number)
+        let playerOneWins = false;
+        let tie = false;
+
+        //logic
+        if (result1 < result2) {
+            playerOneWins = true;
+
+        }
+
+        else if (result2 === result1) {
+            tie = true;
+        }
+
+
+        //output 
+        alert(`the correct answer was ${number} so...`);
+
+        if (tie) {
+            alert('he game enden in a tie');
+        }
+
+        else {
+            alert(`The winner is ${winner}`);
+        }
+
+
+        let answerElement = document.getElementById('answer');
+        let playerOneElement = document.getElementById('fisrtNumber');
+        let playerTwoElement = document.getElementById('secondNumber');
+
+
+        answerElement.textContent = `The  correct answer is ${number} `;
+
+        playerOneElement.textContent = firstPlayer;
+        playerTwoElement.textContent = firstPlayer;
+
+        if (tie) {
+            playerOneElement.classList.add('tie');
+            playerTwoElement.classList.add('tie');
+        }
+
+        else if (playerOneWins) {
+            playerOneElement.classList.add('winner');
+            splayerTwoElement.classList.add('loser');
+        }
+
+        else {
+            playerOneElement.classList.add('loser');
+            playerTwoElement.classList.add('winner');
+        }
+    </script>
+</body>
+
+</html>
