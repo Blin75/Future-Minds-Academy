@@ -8,141 +8,115 @@
     <style>
         * {
             box-sizing: border-box;
+            background-color: black;
+            color: white;
+
         }
 
         body {
-            margin: 0;
             height: 100vh;
+            margin: 0;
             width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: black;
+            display: grid;
+            place-content: center;
         }
 
-        .box {
+        #bigcontainer {
+            background-color: black;
+            align-items: center;
             display: flex;
             flex-direction: column;
-            width: 500px;
+            height: 5rem;
             align-items: center;
             justify-content: center;
-            background-color: white;
+            width: max-content;
+            border-radius: 0.4rem;
+            padding: 2rem;
+            color: white;
+            border: 2px solid white;
             padding: 1rem;
-            border-radius: 10px;
         }
 
-        .firstPlayer {
-            background-color: green;
-            width: 100%;
+        #player1 {
+            display: flex;
+            flex-direction: column;
             padding: 1rem;
-            border-radius: 10px
         }
 
-        .secondPlayer {
-            background-color: red;
-            width: 100%;
+        #player2 {
+            display: flex;
+            flex-direction: column;
             padding: 1rem;
-            border-radius: 10px
         }
 
-        .numbers {
+        #players {
             display: flex;
             flex-direction: row;
-            gap: 1rem;
-        }
-
-        .loser {
-            background-color: red;
         }
 
         .winner {
             background-color: green;
         }
 
+        .loser {
+            background-color: red;
+        }
+
         .tie {
-            background-color: yellow;
+            background-color: orange;
         }
     </style>
 </head>
 
 <body>
-    <div class="box">
-        <div id="answer">
-            <h1>The correct answer is 8</h1>
-        </div>
-        <div class="numbers">
-            <div class="firstPlayer">
-                <div> Player 1</div>
-                <div id="firstNumber">6</div>
-            </div>
-            <div class="secondPlayer">
-                <div>Player 2</div>
-                <div id="secondNumber"> 8</div>
-            </div>
+
+    <div id="bigcontainer">
+        <div id="answer">The correct answer is "7"</div>
+        <div id="players">
+            <div id="player1"> Player one: 6</div>
+            <div id="player2">Player two: 19</div>
         </div>
     </div>
+
+
     <script>
-        //input
+        let myNumber = Math.floor(Math.random() * 10) + 1;
 
-        let number = Math.floor(Math.random() * 10) + 1;
-
-
-        let firstPlayer = parseInt(prompt('Write your number'));
-        let secondPlayer = parseInt(prompt('Write your number'));
+        let firstPlayer = parseInt(prompt(`Lojtari i par ju lutem shkruaj nje number prej 1 deri ne 10`));
+        let secondPlayer = parseInt(prompt(`Lojtari i dyte ju lutem shkruaj nje number prej 1 deri ne 10`));
 
 
-        let result1 = Math.abs(firstPlayer - number)
-        let result2 = Math.abs(secondPlayer - number)
-        let playerOneWins = false;
-        let tie = false;
+        let rezultati1 = Math.abs(firstPlayer - myNumber)
+        let rezultati2 = Math.abs(secondPlayer - myNumber)
 
-        //logic
-        if (result1 < result2) {
-            playerOneWins = true;
-
+        let player1Wins = false
+        let barazim = false
+        if (rezultati1 < rezultati2) {
+            player1Wins = true
+        }
+        else if (firstPlayer === secondPlayer) {
+            barazim = true
         }
 
-        else if (result2 === result1) {
-            tie = true;
+        let answerElement = document.getElementById(`answer`)
+        let player1Element = document.getElementById(`player1`)
+        let player2Element = document.getElementById(`player2`)
+        answerElement.textContent = `The correct answer is ${myNumber}`
+        player1Element.textContent = firstPlayer;
+        player2Element.textContent = secondPlayer;
+        if (barazim) {
+            player1Element.classList.add(`tie`)
+            player2Element.classList.add(`tie`)
         }
-
-
-        //output 
-        alert(`the correct answer was ${number} so...`);
-
-        if (tie) {
-            alert('he game enden in a tie');
+        else if (player1Wins) {
+            player1Element.classList.add(`winner`)
+            player2Element.classList.add(`loser`)
         }
-
         else {
-            alert(`The winner is ${winner}`);
+            player1Element.classList.add(`loser`)
+            player2Element.classList.add(`winner`)
         }
 
-
-        let answerElement = document.getElementById('answer');
-        let playerOneElement = document.getElementById('fisrtNumber');
-        let playerTwoElement = document.getElementById('secondNumber');
-
-
-        answerElement.textContent = `The  correct answer is ${number} `;
-
-        playerOneElement.textContent = firstPlayer;
-        playerTwoElement.textContent = firstPlayer;
-
-        if (tie) {
-            playerOneElement.classList.add('tie');
-            playerTwoElement.classList.add('tie');
-        }
-
-        else if (playerOneWins) {
-            playerOneElement.classList.add('winner');
-            splayerTwoElement.classList.add('loser');
-        }
-
-        else {
-            playerOneElement.classList.add('loser');
-            playerTwoElement.classList.add('winner');
-        }
     </script>
 </body>
 
