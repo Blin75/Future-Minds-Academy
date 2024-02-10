@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let userInput;
+        let numberOfTries = 0;
+        do {
+            userInput = prompt(`Write your Password ${3 - numberOfTries}  ${numberOfTries == 2 ? 'try ' : 'tries'} left `);
+            numberOfTries++;
+        }
+
+        while (userInput !== '12341234' && numberOfTries < 3);
+
+        if (userInput !== '12341234') {
+            alert('Wrong credentials, cant log in');
+        }
+
+
+        else {
+            alert('Welcome!')
+        }
+
+    </script>
+</body>
+
+</html>

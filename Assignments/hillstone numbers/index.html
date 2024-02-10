@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = parseInt(prompt('What number to start from ?'));
+        let steps = 0;
+
+        while (number !== 1) {
+            console.log(number);
+
+
+            if (number % 2 == 0) {
+                number = number / 2;
+
+            }
+
+            else {
+                number = 3 * number + 1;
+
+            }
+            steps++;
+        }
+
+        console.log(number);
+        console.log(`You reached the end in ${steps} steps`);
+
+    </script>
+</body>
+
+</html>
