@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = parseInt(prompt("Please enter a number from 1 to 100:"));
+
+        if (number >= 1 && number <= 100) {
+            console.log("writing numbers from 1 to " + number + "");
+            for (let i = 1; i <= number; i++) {
+                console.log(i);
+            }
+        } else {
+            console.log("Invalid . Please enter a number between 1 and 100.");
+        }
+
+        let secondNumber = parseInt(prompt("Please enter a positive integer from 1 to 100:"));
+
+        if (number2 >= 1 && secondNumber <= 100) {
+            let randomNumber = "";
+            for (let i = 1; i <= secondNumber; i++) {
+                if (i === 1) {
+                    numberString += i;
+                } else {
+                    numberString += ", " + i;
+                }
+            }
+            console.log("Printing numbers from 1 to " + secondNumber + " in one line with commas:");
+            console.log(randomNumber);
+        } else {
+            console.log("Invalid input. Please enter a positive integer between 1 and 100.");
+        }
+
+    </script>
+</body>
+
+</html>
