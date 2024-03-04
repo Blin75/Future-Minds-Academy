@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            place-content: center;
+            background-color: black;
+        }
+
+
+        h2 {
+            text-align: center;
+            font-size: 5rem;
+            color: aqua;
+        }
+
+        button {
+            margin: 1rem;
+            padding: 1rem;
+            font-size: 1.2 rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="timer">00:00:00</h2>
+    <button onclick="startCounting()" id="start">Start</button>
+    <button onclick="pauseCounting()" id="pause">Pause</button>
+    <script>
+        let timer = document.getElementById('timer');
+
+        timer.textContent = '0';
+
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+
+        let interval;
+
+        function startCounting() {
+            interval = setInterval(() => {
+                seconds++;
+
+                if (seconds === 60) {
+                    minutes++;
+                    seconds = 0;
+                }
+
+                if (minutes === 60) {
+                    hours++;
+                    minutes = 0;
+                }
+
+                timer.textContent = `${('' + hours).padStart(2, '0')}:${('' + minutes).padStart(2, '0')}:${('' + seconds).padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        function pauseCounting() {
+            clearInterval(interval);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let userInput = prompt('Write your fullanme');
+        let spaceIndex = userInput.indexOf(' ')
+        let firstName = userInput.substring(0, spaceIndex);
+        let lastName = userInput.substring(spaceIndex + 1);
+        console.log(firstName);
+        console.log(lastName);
+    </script>
+</body>
+
+</html>

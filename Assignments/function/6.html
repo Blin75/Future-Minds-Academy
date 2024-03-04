@@ -9,15 +9,15 @@
 
 <body>
     <script>
-        function WorkingCitizen(age) {
+        function isWorkingCitizen(age) {
             return age >= 18 && age < 65;
         }
 
         let age1 = 25;
-        console.log(`Is the person with age", ${age1} "a working citizen?`, WorkingCitizen(age1));
+        console.log(`Is the person with age", ${age1} "a working citizen?`, isWorkingCitizen(age1));
 
         let age2 = 16;
-        console.log(`Is the person with age", ${age2} "a working citizen?`, WorkingCitizen(age2));
+        console.log(`Is the person with age", ${age2} "a working citizen?`, isWorkingCitizen(age2));
 
     </script>
 </body>
