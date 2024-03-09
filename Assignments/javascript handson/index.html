@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="icon" href="Instagram-Icon.png">
+</head>
+
+<body>
+    <script>
+        let defaultTitle = document.title;
+        let interval;
+        let faviconEl = document.querySelector('link[rel="icon"]');
+        let defaultFavicon = faviconEl.getAttribute('href');
+        function startNotification(text) {
+
+            if (interval) {
+                clearInterval(interval);
+            }
+
+            interval = setInterval(() => {
+                if (document.title === text) {
+                    document.title = defaultTitle;
+                    faviconEl.setAttribute('href', defaultFavicon);
+                }
+                else {
+                    document.title = text;
+                    changeFavicon('🔔');
+                }
+
+            }, 1000);
+        }
+
+        function endNotification() {
+            clearInterval(interval);
+            document.title = defaultTitle;
+            faviconEl.setAttribute('href', defaultFavicon);
+        }
+
+
+        function changeFavicon(emoji) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 32;
+            canvas.height = 32;
+            const context = canvas.getContext('2d');
+            context.font = '32px sans-serif';
+            context.fillText(emoji, 0, 30);
+            faviconEl.setAttribute('href', canvas.toDataURL('image/png'));
+        }
+    </script>
+</body>
+
+</html>
