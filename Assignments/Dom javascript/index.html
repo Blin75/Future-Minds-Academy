@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+
+        .bubble {
+            background-color: skyblue;
+            border-radius: 50%;
+            position: fixed;
+            opacity: 0.48;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        for (let i = 0; i < 300; i++) {
+            let bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+
+            let size = Math.floor(Math.random() * 90 + 10);
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+
+
+            let left = Math.random() * 85 + 5;
+            let top = Math.random() * 85 + 5;
+
+            bubble.style.left = `${left}%`;
+            bubble.style.top = `${top}%`;
+
+            function getRandomColor() {
+                let letters = '0123456789ABCDEF';
+                let color = '#';
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            document.body.appendChild(bubble);
+            bubble.style.backgroundColor = getRandomColor();
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
