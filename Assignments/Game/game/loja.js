@@ -4,6 +4,8 @@ rrafshi.width = 512;
 rrafshi.height = 488;
 
 document.body.appendChild(rrafshi);
+let points = 0;
+let timeCounter = 10;
 
 let ctx = rrafshi.getContext("2d");
 
@@ -28,7 +30,8 @@ miuImg.onload = function () {
 let miu = {};
 miu.x = 100;
 miu.y = 100;
-
+miu.width = 52;
+miu.height = 54;
 
 let macaReady = false;
 let macaImg = new Image();
@@ -41,6 +44,8 @@ macaImg.onload = function () {
 let maca = {};
 maca.x = 300;
 maca.y = 300;
+maca.width = 128;
+maca.height = 128;
 
 let macaSpeed = 10;
 
@@ -67,16 +72,58 @@ let render = function () {
     if (miuReady) { ctx.drawImage(miuImg, miu.x, miu.y); }
     if (macaReady) { ctx.drawImage(macaImg, maca.x, maca.y) }
 
-    if (maca.x > 500) {
-        maca.x = -50;
+    if (maca.x > 500) { maca.x = -50; }
+    if (maca.x < -51) { maca.x = 480; }
+    if (maca.y < -64) { maca.y = 454; }
+    if (maca.y > 454) { maca.y = -63; }
+
+    // Cat touched the mouse
+    if (
+        maca.x < (miu.x + miu.width - 20)
+        && maca.y < (miu.y + miu.height - 20)
+        && miu.x < (maca.x + maca.width - 20)
+        && miu.y < (maca.y + maca.height - 20)
+    ) {
+        points++;
+        reset();
     }
 
-    if (maca.x < -51) {
-        maca.x = 480;
-    }
+    ctx.font = "24px serif";
+    ctx.fillStyle = "white";
+    ctx.fillText("points : " + points, 40, 50);
 
 
+    ctx.fillText("Timer : " + timeCounter, 400, 50);
 }
 
-setInterval(render, 0.1);
+let reset = function () {
+    miu.x = Math.floor(Math.random() * 400) + 20;
+    miu.y = Math.floor(Math.random() * 380) + 55;
+}
+
+let timer = function () {
+
+    if (timeCounter == 0) {
+        gameOver();
+    }
+    else {
+        timeCounter--;
+    }
+}
+
+let gameOver = function () {
+    ctx.font = "24px serif";
+    ctx.fillStyle = "white";
+    if (points >= 5) {
+        ctx.fillText("YOU WON : ", 260, 230);
+    }
+
+    else {
+        ctx.fillText("YOU LOST : ", 260, 230);
+    }
+}
+
+reset();
+let drawCanvas = setInterval(render, 0.1);
+let timerInteval = setInterval(timer, 1000);
 
