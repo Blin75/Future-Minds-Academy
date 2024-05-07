@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let blini =  document.getElementById('#blini');//this property selects an element by id, it is very usefull to select a very specific element
+        let document = document.querySelector('.document');//this property selects an element by using css selectors
+        heading.textContent = 'new text';//this property changes the text inside a p, h1, a, span 
+        heading.innerHTML = ' this is a <strong> strong</strong> text';//this property inserts an actual inside element
+        anchor.setAttribute ('href', 'https://a.futureminds.io/lms/mod/lesson/view.php?id=224' );//this property creates or changes the attribute
+        element.removeAttribute('height');//this property removes an attritbute from an element
+        element.style.color('white');//this property changes the elements color
+        element.style.backgroundColor('black');//this property changes the elements background color 
+        element.classList.add('newClass');//this property adds a class 
+        element.classList.remove('oldClass');//this property deletes a class
+        element.classList.toggle('anotherClass');//this property is between hide and show
+        let newDOcument =  document.createElement('h1');
+        document.body.appendChild(newElement);//append child adds element into another elemnent
+
+
+        const body = document.body
+        body.append("Hello World", "Bye");
+        //difference between append and appendChild is that with append you can add strings directly, with appendChild you can only append elements
+        const div = document.createElement('div');//this property only creates  an element but does not add it into the document
+        body.append(div)//this propertty adds the element into the document 
+        element.remove();//This propertty deletes the whole element(more preferable)
+        div.append(element)//this propertty adds the element
+        div.removeChild(element)//this propertty removes child from their parent
+
+
+        let button = document.getElementById('btn');//the button
+        function buttonClick(){};//the callback function
+        button.addEventListener('click', buttonClick );//registering an eventListener
+        //this function listens to events that happen to run our callback function
+        button.removeEventListener('click', buttonClick)//this property remvoes an event listener
+
+        // build a simple program where the user clicks a button which increases a counter by one
+        let myButton = document.getElementById('myBtn');
+        let counter = documnet.getElementById('counter');
+        let currentCounter = 0;
+
+        function myButton(){
+            currentCounter++;
+            counter.textContent = currentCounter;
+        }//this function increases counter by 1 everytime the button is clicked
+
+        myButton.addEventListener('click', myButton);//this proeperty registres the event listener
+    </script>
+</body>
+</html>
