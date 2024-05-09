@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   
+function main() {
+    
+    let firstNUmber = parseFloat(prompt("Write the first number:"));
+    let secondNumber = parseFloat(prompt("Write the second number:"));
+    let thirdNubmer = parseFloat(prompt("Write the third number:"));
+
+    
+    if (!isNaN(firstNUmber) && !isNaN(secondNumber) && !isNaN(thirdNubmer)) {
+    
+        let largestNumber = findLargestNumber(firstNUmber, secondNumber, thirdNubmer);
+        console.log("The largest number is:", largestNumber);
+    } else {
+        console.log("Invalid input. Please enter valid numbers.");
+    }
+}
+
+function findLargestNumber(a, b, c) {
+   
+    if (a >= b && a >= c) { return a;}
+    else if (b >= a && b >= c) {return b;}
+    else {return c;}
+}
+
+main();
+
+    </script>
+</body>
+</html>
