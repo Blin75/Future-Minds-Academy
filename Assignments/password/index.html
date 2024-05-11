@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Revealer</title>
+<style>
+    input[type="password"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+
+<h2>Password Revealer</h2>
+<p>Hover over the password input field to reveal the password.</p>
+
+<input type="password" id="passwordInput">
+
+<script>
+    const passwordInput = document.getElementById("passwordInput");
+
+    passwordInput.addEventListener("mouseenter", function() {
+        passwordInput.type = "text";
+    });
+
+    passwordInput.addEventListener("mouseleave", function() {
+        passwordInput.type = "password";
+    });
+</script>
+
+</body>
+</html>
