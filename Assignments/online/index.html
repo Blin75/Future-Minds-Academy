@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Status Popup</title>
+<style>
+    /* Style for the popup */
+    #offlinePopup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f8d7da;
+        padding: 20px;
+        border: 2px solid #dc3545;
+        border-radius: 5px;
+        z-index: 9999;
+    }
+
+    /* Style for the text inside the popup */
+    #offlineText {
+        font-size: 18px;
+        color: #721c24;
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+
+<!-- Popup to display when offline -->
+<div id="offlinePopup">
+    <p id="offlineText">You are offline, please wait until you are reconnected.</p>
+</div>
+
+<script>
+    // Function to show the offline popup
+    function showOfflinePopup() {
+        const offlinePopup = document.getElementById("offlinePopup");
+        offlinePopup.style.display = "block";
+    }
+
+    // Function to hide the offline popup
+    function hideOfflinePopup() {
+        const offlinePopup = document.getElementById("offlinePopup");
+        offlinePopup.style.display = "none";
+    }
+
+    // Event listener for when the user goes offline
+    window.addEventListener("offline", showOfflinePopup);
+
+    // Event listener for when the user goes back online
+    window.addEventListener("online", hideOfflinePopup);
+</script>
+
+</body>
+</html>
