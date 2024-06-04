@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile List</title>
+</head>
+<body>
+    <div id="profile-list">
+        <table id="profile-table" border="1">
+            <thead>
+            
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Bio</th>
+                
+            </thead>
+            <tbody>
+                <!-- Table rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let profiles = [
+            {
+                name: 'Ridvan Aliu',
+                age: 42,
+                bio: 'My biography with a lot of ups and downs'
+            },
+            {
+                name: 'Filan Fisteku',
+                age: 101,
+                bio: 'Shum interesant bio ka filoni...'
+            },
+            {
+                name: 'Gjilan Zajmi',
+                age: 16,
+                bio: 'Jeton ne Zvicerr...'
+            }
+        ];
+
+        let profileTableBody = document.querySelector('#profile-table tbody');
+
+        for (let i = 0; i < profiles.length; i++) {
+            let profileRow = document.createElement('tr');
+            profileRow.innerHTML = `
+                <td>${i + 1}</td>
+                <td>${profiles[i].name}</td>
+                <td>${profiles[i].age}</td>
+                <td>${profiles[i].bio}</td>
+            `;
+            profileTableBody.appendChild(profileRow);
+        }
+
+        function renderHTML(name, age, bio) {
+            let finalHTML = `
+                <tr>
+                    <td></td>
+                    <td>${name}</td>
+                    <td>${age}</td>
+                    <td>${bio}</td>
+                </tr>
+            `;
+            return finalHTML;
+        }
+    </script>
+</body>
+</html>

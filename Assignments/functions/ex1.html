@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Profile List</h1>
+    <div id="profile-list"></div>
+
+    <script>
+
+    let profiles = [
+        {
+            name: 'Ridvan Aliu',
+            age: 42,
+            bio: 'My biography with a lot of ups and downs'
+        },
+        {
+            name: 'Filan Fisteku',
+            age: 101,
+            bio: 'Shum interesant bio ka filoni...'
+        },
+        {
+            name: 'Gjilan Zajmi',
+            age: 16,
+            bio: 'Jeton ne Zvicerr...'
+        }
+    ];
+
+
+    profiles[1].age;
+let profileListDiv = document.getElementById('profile-list');
+
+   for (let i = 0; i < profiles.length; i++) {
+    let profile = document.createElement('div');
+    profile.innerHTML = `
+        <p>${i+1}. ${profiles[i].name}, ${profiles[i].age}, ${profiles[i].bio}</p>
+    `;
+    profileListDiv.appendChild(profile);
+}
+
+
+        renderHTML()
+function  renderHTML(name, age, bio){
+    let finalHTML = '';
+
+    finalHTML =
+    `<h1>${name}</h1>
+    <h2>${age}</h2>
+    <p>${bio}</p>
+    <hr>
+    `;
+    return finalHTML;
+}
+
+
+
+
+    </script>
+</body>
+</html>

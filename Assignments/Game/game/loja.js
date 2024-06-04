@@ -112,7 +112,7 @@ let timer = function () {
 }
 
 let gameOver = function () {
-    ctx.font = "24px serif";
+    ctx.font = "24px serif";    
     ctx.fillStyle = "white";
     if (points >= 5) {
         ctx.fillText("YOU WON : ", 260, 230);

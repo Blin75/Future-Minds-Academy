@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: black;
+        }
+
+        div{  
+            margin: 2rem;
+            padding: 1rem;
+            width: 300px;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        div:hover{
+            cursor: pointer;
+            -webkit-box-shadow: 0px 0px 10px 1px #0a0808d6;
+             box-shadow: 0px 0px 10px 1px #131212d6;
+        }
+
+        .main{
+            border: 2px solid black;
+            box-shadow:  10px 15px red ;
+           
+        }
+
+        .main:hover{
+            background: rgb(170,29,29);
+            background: linear-gradient(90deg, rgba(170,29,29,1) 36%, rgba(255,0,0,1) 100%);
+        }
+
+        .databaza{
+            border: 3px solid green;
+        }
+
+
+        .databaza:hover{
+            background: rgb(27,116,8);
+            background: linear-gradient(90deg, rgba(27,116,8,1) 46%, rgba(0,255,102,1) 100%);
+        }
+
+        .kolona{
+            border: 3px solid black;
+        }
+
+        .kolona:hover{
+            background: rgb(0,0,0);
+            background: linear-gradient(90deg, rgba(0,0,0,1) 36%, rgba(191,176,176,1) 100%);
+            color: white;
+        }
+
+        button{
+            margin-left: 35px;
+            padding: 15px 32px;
+            background-color: darkgreen;
+            color: white;
+            border-radius: 10px;
+        }
+
+        button:hover{
+            background-color: green;
+            cursor: pointer;
+        }
+
+        label{
+            font-weight: 100;
+        }
+
+        input{
+            border-radius: 5px;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>MySQL - Krijimi i datatabazës/ Tabelës/ të dhënave</h1>
+    </div>
+    <div class="databaza">
+        <label for="Serveri">Serveri:</label>
+        <input type="text"><br><br>
+        <label for="Useri">Useri:</label>
+        <input type="text"><br><br>
+         <label for="Fjalekalimi">Fjalekalimi:</label>
+        <input type="text"><br><br>
+        <label for="Databaza">Databaza:</label>
+        <input type="text"><br><br>
+        <label for="Tabela">Tabela:</label>
+        <input type="text">
+       
+    </div>
+    <div class="kolona">
+        <label for="Kolonat">Kolonat:</label>
+        <input type="number" id="columnInput">
+    </div>
+    <button id="save">Ruaj</button>
+    <script>
+        document.getElementById('columnInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                addColumn();
+            }
+        });
+    
+        function addColumn() {
+            var columnCount = parseInt(document.getElementById('columnInput').value);
+            if (!isNaN(columnCount)) {
+                var container = document.body;
+                for (var i = 0; i < columnCount; i++) {
+                    var column = document.createElement('div');
+                    column.className = 'kolona';
+                    column.textContent = 'Kolona ' + (i + 1);
+                    container.appendChild(column);
+                }
+                document.getElementById('columnInput').value = ''; 
+            } else {
+                alert('Please enter a valid number.');
+            }
+        }
+    </script>
+<script>
+       document.getElementById('save').addEventListener('click', function() {
+            location.reload();
+        });
+</script>
+
+    
+</body>
+</html>
