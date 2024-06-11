@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+   
+    function classifyCharacter(character) {
+        
+        const lowerCaseChar = character.toLowerCase();
+        
+        if ('aeiou'.includes(lowerCaseChar)) {
+            console.log('You entered a vowel.');
+        }
+        
+        else if (lowerCaseChar >= 'a' && lowerCaseChar <= 'z') {
+            console.log('You entered a consonant.');
+        }
+    
+        else if (lowerCaseChar >= '0' && lowerCaseChar <= '9') {
+            console.log('You entered a number.');
+        }
+       
+        else {
+            console.log('You entered another symbol.');
+        }
+    }
+
+    
+    document.addEventListener('keypress', function(event) {
+        
+        const char = event.key;
+
+        if (char.length === 1) {
+            classifyCharacter(char);
+        } else {
+            console.log('Please enter a single character.');
+        }
+    });
+</script>
+
+</body>
+</html>
