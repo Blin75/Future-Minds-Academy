@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room Dimension</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .room {
+    width: 80%;
+    padding-top: 60%; 
+    background-color: lightblue;
+    position: relative;
+  }
+  .dimensions {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="room" id="room"></div>
+</div>
+
+<script>
+  function drawRoom(width, length) {
+    
+    if (width < length) {
+      const temp = width;
+      width = length;
+      length = temp;
+    }
+
+    const roomElement = document.getElementById('room');
+    const area = width * length;
+    const perimeter = 2 * (width + length);
+
+    roomElement.style.width = width * 50 + 'px'; 
+    roomElement.style.height = length * 50 + 'px';
+
+    roomElement.innerHTML = `
+      <div class="dimensions">
+        <p>Width: ${width.toFixed(2)}m</p>
+        <p>Length: ${length.toFixed(2)}m</p>
+        <p>Area: ${area.toFixed(2)} sq.m</p>
+        <p>Perimeter: ${perimeter.toFixed(2)}m</p>
+      </div>
+    `;
+  }
+
+
+  const width = parseFloat(prompt("Enter the width of the room (in meters):"));
+  const length = parseFloat(prompt("Enter the length of the room (in meters):"));
+
+  if (isNaN(width) || isNaN(length)) {
+    alert("Please enter valid dimensions.");
+  } else {
+    drawRoom(width, length);
+  }
+</script>
+</body>
+</html>
