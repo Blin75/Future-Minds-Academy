@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closest Number Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .player {
+            margin-bottom: 20px;
+        }
+
+        input {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 0 5px;
+            text-align: center;
+        }
+
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .winner {
+            background-color: lightgreen;
+        }
+
+        .loser {
+            background-color: salmon;
+        }
+
+        .tie {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Closest Number Game</h1>
+        <div class="player">
+            <h2>Player 1</h2>
+            <input type="number" id="number1" placeholder="Enter a number">
+        </div>
+        <div class="player">
+            <h2>Player 2</h2>
+            <input type="number" id="number2" placeholder="Enter a number">
+        </div>
+        <div id="result"></div>
+        <button id="restart">Restart</button>
+    </div>
+
+    <script>
+        
+        function generateRandomTarget() {
+            return Math.floor(Math.random() * 100) + 1; 
+        }
+
+       
+        function determineWinner(player1Number, player2Number, targetNumber) {
+            const diff1 = Math.abs(targetNumber - player1Number);
+            const diff2 = Math.abs(targetNumber - player2Number);
+
+            if (diff1 === diff2) {
+                return 'tie';
+            } else if (diff1 < diff2) {
+                return 'Player 1';
+            } else {
+                return 'Player 2';
+            }
+        }
+
+       
+        function updateResult(winner) {
+            const resultDiv = document.getElementById('result');
+            const number1 = document.getElementById('number1');
+            const number2 = document.getElementById('number2');
+
+            if (winner === 'Player 1') {
+                number1.classList.add('winner');
+                number2.classList.add('loser');
+            } else if (winner === 'Player 2') {
+                number1.classList.add('loser');
+                number2.classList.add('winner');
+            } else {
+                number1.classList.add('tie');
+                number2.classList.add('tie');
+            }
+        }
+
+        
+        function handlePlayerInputs(event) {
+            if (event.keyCode === 13) { 
+                const player1Number = parseInt(document.getElementById('number1').value);
+                const player2Number = parseInt(document.getElementById('number2').value);
+                const targetNumber = generateRandomTarget();
+                const winner = determineWinner(player1Number, player2Number, targetNumber);
+                updateResult(winner);
+            }
+        }
+
+       
+        document.getElementById('number2').addEventListener('keydown', handlePlayerInputs);
+        document.getElementById('number1').addEventListener('keydown', handlePlayerInputs);
+
+       
+        document.getElementById('restart').addEventListener('click', function() {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>
