@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function expression for hello function
+        var hello = function(x) {
+            for (let i = 0; i < x; i++)
+                console.log(`hello world`);
+        };
+
+        // Calling hello function
+        hello(12);
+
+        // Function expression for print function
+        var print = function(b) {
+            console.log(b);
+        };
+
+        // Calling print function
+        print('blin');
+
+        // Function expression for covert function
+        var covert = function(s) {
+            return s * 1.62;
+        };
+
+        // Calling covert function
+        console.log(covert(8));
+
+        // Function expression for CircleArea function
+        var CircleArea = function(radius) {
+            let area = Math.PI * Math.pow(radius, 2);
+            return area;
+        };
+
+        // Calling CircleArea function
+        let radius = 7;
+        let area = CircleArea(radius);
+        console.log("The circle area with radiuS", radius, "is:", area);
+
+        // Function expression for getFullName function
+        var getFullName = function(name, surName) {
+            return `Welcome,  ${name}  ${surName}`;
+        };
+
+        // Calling getFullName function
+        console.log(getFullName('Filan', 'Fisteku'));
+
+        // Function expression for isWorkingCitizen function
+        var isWorkingCitizen = function(age) {
+            return age >= 18 && age < 65;
+        };
+
+        // Calling isWorkingCitizen function
+        let age1 = 25;
+        console.log(`Is the person with age", ${age1} "a working citizen?`, isWorkingCitizen(age1));
+
+        let age2 = 16;
+        console.log(`Is the person with age", ${age2} "a working citizen?`, isWorkingCitizen(age2));
+
+        // Function expression for isEven function
+        var isEven = function(number) {
+            return number % 2 === 0;
+        };
+
+        // Calling isEven function
+        console.log(isEven(4));
+        console.log(isEven(7));
+        console.log(isEven(0));
+
+    </script>
+</body>
+
+</html>

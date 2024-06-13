@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Timer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .timer {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="startButton">Start Countdown</button>
+        <div id="timer" class="timer"></div>
+    </div>
+
+    <script>
+        document.getElementById('startButton').addEventListener('click', function() {
+            let countdown = 10;
+            const timerElement = document.getElementById('timer');
+            
+            const interval = setInterval(function() {
+                if (countdown > 0) {
+                    timerElement.textContent = countdown;
+                    countdown--;
+                } else {
+                    timerElement.textContent = "Time's up!";
+                    clearInterval(interval);
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
