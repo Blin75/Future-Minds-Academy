@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click to Create Box with Rotation and Dragging</title>
+<style>
+  .box {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<script>
+  let selectedBox = null;
+  let offsetX, offsetY;
+
+  document.addEventListener('click', function(event) {
+    createBox(event.clientX, event.clientY);
+  });
+
+  function createBox(x, y) {
+    const box = document.createElement('div');
+    box.classList.add('box');
+    box.style.left = x + 'px';
+    box.style.top = y + 'px';
+    box.style.transform = `rotate(${getRandomRotation()}deg)`;
+    box.addEventListener('mousedown', startDragging);
+    document.body.appendChild(box);
+  }
+
+  function startDragging(event) {
+    selectedBox = event.target;
+    offsetX = event.clientX - selectedBox.getBoundingClientRect().left;
+    offsetY = event.clientY - selectedBox.getBoundingClientRect().top;
+    document.addEventListener('mousemove', dragBox);
+    document.addEventListener('mouseup', stopDragging);
+  }
+
+  function dragBox(event) {
+    if (!selectedBox) return;
+    const newX = event.clientX - offsetX;
+    const newY = event.clientY - offsetY;
+    selectedBox.style.left = newX + 'px';
+    selectedBox.style.top = newY + 'px';
+  }
+
+  function stopDragging() {
+    selectedBox = null;
+    document.removeEventListener('mousemove', dragBox);
+    document.removeEventListener('mouseup', stopDragging);
+  }
+
+  function getRandomRotation() {
+    return Math.floor(Math.random() * 360); 
+  }
+</script>
+
+</body>
+</html>
