@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task List</title>
+</head>
+<body>
+
+<h2>Task List</h2>
+<ul id="task-list"></ul>
+
+<script>
+  const taskList = [];
+
+  // Prompt the user 5 times and store the answers in the taskList array
+  for (let i = 0; i < 5; i++) {
+    const task = prompt("Write a task for today");
+    taskList.push(task);
+  }
+
+  // Display the tasks in the DOM
+  const taskListElement = document.getElementById('task-list');
+  taskList.forEach(task => {
+    const li = document.createElement('li');
+    li.textContent = task;
+    taskListElement.appendChild(li);
+  });
+</script>
+
+</body>
+</html>
