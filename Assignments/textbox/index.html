@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Textbox</title>
+<style>
+  .custom-textbox {
+    width: 300px;
+    height: 50px;
+    border: 1px solid #ccc;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    resize: none;
+    
+  }
+</style>
+</head>
+<body>
+
+<div id="custom-textbox" class="custom-textbox" contenteditable="true" placeholder="Type here..."></div>
+
+<script>
+  const customTextbox = document.getElementById('custom-textbox');
+
+  customTextbox.addEventListener('input', function() {
+    console.log(customTextbox.innerText);
+  });
+
+  customTextbox.addEventListener('keydown', function(event) {
+    if (event.key === 'Backspace' && customTextbox.innerText.length === 0) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+</body>
+</html>
