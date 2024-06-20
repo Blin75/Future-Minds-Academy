@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgb(46, 165, 206);
+            background: linear-gradient(90deg, rgba(46, 165, 206, 1) 33%, rgba(14, 0, 173, 1) 68%);
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            border: 4px solid black;
+        }
+
+        .container:hover{
+            background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 2%, rgba(141,137,137,1) 47%, rgba(0,0,0,1) 91%);
+color: white;
+border: 4px solid white;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .invalid {
+            color: red;
+        }
+
+        .valid {
+            color: green;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <ul id="requirements">
+                <li id="lowercase" class="invalid">At least one lowercase letter</li>
+                <li id="uppercase" class="invalid">At least one uppercase letter</li>
+                <li id="number" class="invalid">At least one number</li>
+                <li id="special" class="invalid">At least one special character (.,'!#)</li>
+            </ul>
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const submitBtn = document.getElementById('submitBtn');
+
+            const requirements = {
+                lowercase: document.getElementById('lowercase'),
+                uppercase: document.getElementById('uppercase'),
+                number: document.getElementById('number'),
+                special: document.getElementById('special')
+            };
+
+            function validatePassword() {
+                const password = passwordInput.value;
+
+                const lowerCasePattern = /[a-z]/;
+                const upperCasePattern = /[A-Z]/;
+                const numberPattern = /\d/;
+                const specialCharPattern = /[.,'!#]/;
+
+                requirements.lowercase.classList.toggle('valid', lowerCasePattern.test(password));
+                requirements.lowercase.classList.toggle('invalid', !lowerCasePattern.test(password));
+
+                requirements.uppercase.classList.toggle('valid', upperCasePattern.test(password));
+                requirements.uppercase.classList.toggle('invalid', !upperCasePattern.test(password));
+
+                requirements.number.classList.toggle('valid', numberPattern.test(password));
+                requirements.number.classList.toggle('invalid', !numberPattern.test(password));
+
+                requirements.special.classList.toggle('valid', specialCharPattern.test(password));
+                requirements.special.classList.toggle('invalid', !specialCharPattern.test(password));
+
+                const isValid = lowerCasePattern.test(password) &&
+                                upperCasePattern.test(password) &&
+                                numberPattern.test(password) &&
+                                specialCharPattern.test(password);
+
+                submitBtn.disabled = !isValid;
+            }
+
+            passwordInput.addEventListener('input', validatePassword);
+        });
+    </script>
+</body>
+</html>
