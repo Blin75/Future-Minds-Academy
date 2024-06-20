@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        select, input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #facts {
+            margin-top: 20px;
+        }
+
+        .fact {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .error {
+            color: red;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Discover Cool Facts About Your Birthday</h1>
+        <form id="birthdayForm">
+            <label for="month">Month:</label>
+            <select id="month" name="month" required>
+                <option value="" disabled selected>Select your month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <label for="day">Day:</label>
+            <input type="number" id="day" name="day" min="1" max="31" required>
+            <button type="submit">Get Facts</button>
+        </form>
+        <div id="facts">
+            <!-- Facts will be displayed here -->
+        </div>
+        <div class="error" id="error"></div>
+    </div>
+    <script>
+        document.getElementById('birthdayForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const month = document.getElementById('month').value;
+            const day = document.getElementById('day').value;
+
+            // Clear previous facts and errors
+            document.getElementById('facts').innerHTML = '';
+            document.getElementById('error').textContent = '';
+
+            try {
+                const facts = await getBirthdayFacts(month, day);
+                displayFacts(facts);
+            } catch (error) {
+                document.getElementById('error').textContent = 'Something went wrong. Please try again later.';
+                console.error(error);
+            }
+        });
+
+        async function getBirthdayFacts(month, day) {
+            const url = `https://numbersapi.p.rapidapi.com/${month}/${day}/date`;
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': 'YOUR_RAPIDAPI_KEY',
+                    'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com'
+                }
+            };
+
+            const requests = [
+                fetch(url, options).then(response => response.text()),
+                fetch(url, options).then(response => response.text()),
+                fetch(url, options).then(response => response.text())
+            ];
+
+            const results = await Promise.all(requests);
+            return results;
+        }
+
+        function displayFacts(facts) {
+            const factsContainer = document.getElementById('facts');
+            facts.forEach(fact => {
+                const factElement = document.createElement('div');
+                factElement.className = 'fact';
+                factElement.textContent = fact;
+                factsContainer.appendChild(factElement);
+            });
+        }
+    </script>
+</body>
+</html>
