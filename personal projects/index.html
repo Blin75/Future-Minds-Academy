@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohana Coffee Shop</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #4A90E2, #7F4FAF);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 2rem;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffdd57;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            background: white;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #4A90E2;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex: 1 1 calc(33.333% - 2rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #4A90E2;
+        }
+
+        .menu-item h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .menu-item p {
+            color: #666;
+            margin: 0;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ohana Coffee Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to Ohana Coffee Shop</h2>
+            <p>Your cozy spot for the best coffee in town.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Ohana Coffee Shop is dedicated to providing a relaxing and welcoming environment for coffee lovers. Our name, Ohana, means family, and we treat every customer like part of our own.</p>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Cappuccino">
+                    <h3>Cappuccino</h3>
+                    <p>A classic coffee drink with steamed milk foam.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Latte">
+                    <h3>Latte</h3>
+                    <p>Smooth and creamy with a touch of foam.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Espresso">
+                    <h3>Espresso</h3>
+                    <p>Rich and bold, a true coffee lover's delight.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Mocha">
+                    <h3>Mocha</h3>
+                    <p>Chocolatey goodness with a coffee kick.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Hot Chocolate">
+                    <h3>Hot Chocolate</h3>
+                    <p>Warm, sweet, and perfect for a cozy day.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Tea">
+                    <h3>Tea</h3>
+                    <p>A variety of flavors to soothe your soul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Address: 123 Coffee Street, Brewtown</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@ohanacoffee.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ohana Coffee Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

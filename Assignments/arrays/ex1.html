@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="first-name">First Name:</h3>
+    <h3 id="last-name">Last Name:</h3>
+    <h3 id="address">Address:</h3>
+    <h3 id="phone">Phone:</h3>
+
+    <script>
+        let personInfo = ['Ridvan', 'Aliu', '9024 Edenshire Dr', '+1206431733'];
+        
+        document.getElementById('first-name').innerHTML += " " + personInfo[0];
+        document.getElementById('last-name').innerHTML += " " + personInfo[1];
+        document.getElementById('address').innerHTML += " " + personInfo[2];
+        document.getElementById('phone').innerHTML += " " + personInfo[3];
+    </script>
+</body>
+</html>

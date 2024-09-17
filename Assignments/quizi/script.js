@@ -15,18 +15,18 @@ const time_line    = document.querySelector('.time_line');
 
 let timer = 15;
 let activeQuestion = 0;
-let points = 0;
-let timeCount; // declare the timer interval variable globally
+let point = 0;
+let timeCount;
 
-start_btn.addEventListener('click', function () {
+start_btn.addEventListener('click', function(){
     info_box.classList.add('activeInfo');
 });
 
-exit_quiz.addEventListener('click', function () {
+exit_quiz.addEventListener('click', function (){
     info_box.classList.remove('activeInfo');
 });
 
-continue_btn.addEventListener('click', function () {
+continue_btn.addEventListener('click', function(){
     info_box.classList.remove('activeInfo');
     quiz_box.classList.add('activeQuiz');
     startQuiz();
@@ -42,47 +42,47 @@ next_btn.addEventListener('click', function(){
     if(activeQuestion < questions.length-1){
         activeQuestion++;
         loadQuestions(activeQuestion);
-        resetTimer(); // reset the timer when moving to the next question
+        resetTimer();
     }
     else{
         quiz_box.classList.remove('activeQuiz');
         result_box.classList.add('activeResult');
         score_text.textContent = points + ' / ' + questions.length;
-        clearInterval(timeCount); // clear the timer when quiz is finished
-    }  
+        clearInterval(timeCount);
+    }
 });
 
-replay_btn.addEventListener('click', function() {
-    location.reload(); // Reload the page when the "Replay Quiz" button is clicked
+replay_btn.addEventListener('click', function(){
+    location.reload();
 });
 
 function startQuiz() {
-    resetTimer(); // initialize the timer
+    resetTimer();
 }
 
-function resetTimer() {
-    clearInterval(timeCount); // clear any existing timer
+function resetTimer(){
+    clearInterval(timeCount);
     timer = 15;
     timer_sec.textContent = timer;
-    
-    // Set the initial width of the time_line
-    let timeLineWidth = 100; // Assuming 100% width at the start
+
+
+    let timeLineWidth = 100;
     time_line.style.width = timeLineWidth + '%';
-    
-    timeCount = setInterval(() => {
+
+    timerCount = setInterval(() => {
         timer_sec.textContent = timer;
-        
-        // Calculate the width of the time_line based on the remaining time
+
         timeLineWidth = (timer / 15) * 100;
-        time_line.style.width = timeLineWidth + '%';
-        
-        if (timer > 0) { 
-            timer--; 
-        } else { 
-            clearInterval(timeCount); 
+        time_line.style.width = timeLineWidth +'%';
+
+        if(timer > 0) {
+            timer --;
+        } else {
+            clearInterval(timeCount);
         }
     }, 1000);
 }
+
 
 function loadQuestions(q){
     let allOptions = questions[q].options;
@@ -91,16 +91,16 @@ function loadQuestions(q){
 
     for(let i=0; i<allOptions.length; i++){
         option_list.innerHTML +=`
-            <div class="option" onclick="checkAnswer(${q}, ${i}, this)">
-                <span>${allOptions[i]}</span>
-            </div>
+        <div class="option" onclick="checkAnswer(${q}, ${1}, this)">
+        <span>${allOptions[i]}</span>
+        </div>
         `;
     }
-    total_que.textContent = questions[q].numb + '/' + questions.length + ' questions';
+    total_que.textContent = questions[q].numb + '/' + questions.length + 'questions';
 }
 
 function checkAnswer(q, o, opt){
-    clearInterval(timeCount); // stop the timer when an option is pressed
+    clearInterval(timeCount);
     next_btn.classList.add('show');
 
     for(let i=0; i<questions[q].options.length; i++){
@@ -113,7 +113,7 @@ function checkAnswer(q, o, opt){
         opt.classList.add('correct');
         points++;
     }
-    else { 
+    else{
         opt.classList.add('incorrect');
-    } 
+    }
 }
