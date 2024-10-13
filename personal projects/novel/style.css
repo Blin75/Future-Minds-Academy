@@ -1,0 +1,21 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    background: rgb(143,0,171);
+    background: linear-gradient(90deg, rgba(143,0,171,1) 17%, rgba(0,3,171,1) 48%, rgba(175,0,255,1) 82%);
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 40rem;
+}
+ h1{
+    font-family: Nosifer;
+ }
