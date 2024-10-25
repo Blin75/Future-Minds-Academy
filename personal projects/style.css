@@ -206,7 +206,8 @@ iframe {
 }
 
 .rightContainer {
-    background-color: rgb(157, 26, 14);
+    background: url('britannica.jpg') no-repeat center center fixed;
+    background-size: cover;
     height: 100vh;
     overflow-y: scroll;
     padding: 0 2rem;
@@ -256,7 +257,7 @@ h2 {
 }
 
 .listingCard {
-    background-color: white;
+    background-color: rgb(0, 101, 252) ;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -347,7 +348,7 @@ h2 {
 /* card */
 
 .global {
-    background-color: white;
+    background-color: rgb(252, 0, 0);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -363,7 +364,7 @@ h2 {
 }
 
 .card {
-    background-color: white;
+    background-color: rgb(67, 67, 67);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

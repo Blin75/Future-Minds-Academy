@@ -4,26 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-        }
 
-        .bubble {
-            background-color: skyblue;
-            border-radius: 50%;
-            position: fixed;
-            opacity: 0.48;
-            border: 1px solid blue;
-        }
-    </style>
 </head>
-
 <body>
-
     <script>
-        for (let i = 0; i < 300; i++) {
+        for(let i=0; i<300; i++){
             let bubble = document.createElement('div');
             bubble.classList.add('bubble');
 
@@ -38,10 +23,10 @@
             bubble.style.left = `${left}%`;
             bubble.style.top = `${top}%`;
 
-            function getRandomColor() {
-                let letters = '0123456789ABCDEF';
+            function getRandomColor(){
+                let letters = '01223456789ABCDEF';
                 let color = '#';
-                for (var i = 0; i < 6; i++) {
+                for(var i=0; i<6; i++) {
                     color += letters[Math.floor(Math.random() * 16)];
                 }
                 return color;
@@ -49,13 +34,8 @@
 
             document.body.appendChild(bubble);
             bubble.style.backgroundColor = getRandomColor();
-
-
-
+            
         }
-
-
     </script>
 </body>
-
 </html>

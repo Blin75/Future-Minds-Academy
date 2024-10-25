@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green {color: rgb(8, 0, 235);}
+    </style>
+</head>
+<body>
+    <ul id="list">
+
+    </ul>
+
+
+    <script>
+        const list = document.querySelector('#list');
+        let nav = ['Home', 'Services', 'About', 'Contact'];
+
+        list.innerHTML = `<li onclick = "mainNav(this, 0);">Home</li>`;
+
+        for(let i=0; i<nav.length; i++){
+            list.innerHTML +=`<li onclick = "mainNav(this, ${i});">${nav[i]}</li>`
+        }
+
+        function mainNav(obj, i){
+            obj.classList.add('green');
+            obj.innerHTML = nav[i] + `<img width="10" src="arrow-right.png" alt="">`
+        }
+    </script>
+</body>
+</html>

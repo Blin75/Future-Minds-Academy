@@ -1,0 +1,77 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.col-10{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.form-control{
+    width: 600px;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+}
+.rowi{
+    position: relative;
+    left: 90px;
+}
+
+.miti{
+    width: min-content;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: green;
+    color: white;
+}
+
+
+thead{
+    display: flex;
+    background-color: rgb(30, 30, 30);
+    padding: 1rem;
+    width: 800px;
+    align-items: center;
+    border: 2px solid black;
+}
+
+tbody{
+    display: flex;
+    background-color: rgb(41, 41, 41);
+    padding: 1rem;
+    width: 800px;
+    align-items: center;  
+}
+
+th{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
+td{
+    padding-left: 4.5rem;
+    padding-right: 3.5rem; 
+}
+
+.divi{
+    width: 800px;
+}
+
+.btnn{
+    width: min-content;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(128, 0, 0);
+    color: white;
+    font-style: none;
+}

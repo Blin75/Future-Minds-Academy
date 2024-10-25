@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="rez"></h1>
+    <script>
+        let age = prompt('Shkruaj nje numer:');
+        let message;
+        
+        if (!(age < 18) && !(age >= 65)) {
+            message = 'You are a working citizen';
+        } else {
+            message = 'You are too young or too old';
+        }
+        
+        // Display the message in the h1 element
+        document.getElementById('rez').innerHTML = message;
+    </script>
+</body>
+</html>
