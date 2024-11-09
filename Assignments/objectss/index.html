@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            background-color: aquamarine;
+        }
+
+        #timerDv {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        #pointDv {
+            position: absolute;
+            top: 20px;
+            left: 720px;
+        }
+
+        #msg{
+            position: absolute;
+            top: 20px;
+            left: 350px;
+            font-weight: bold;
+            visibility: hidden;
+        }
+        
+        #restartBtn{
+            padding: 20px;
+            border: 2px solid black;
+            border: 10px;
+            font-size: 18px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pointDv">Points: 0</div>
+    <div id="msg"></div>
+    <div id="timerDv">Timer: 15</div>
+    <canvas width="800" height="500" id="canvas"></canvas>
+    <div><button id="restartBtn">Restart</button></div>
+    <script src="main.js"></script>
+</body>
+
+</html>
