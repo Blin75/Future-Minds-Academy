@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+background-color:black ;
+
+
+}
+
+.up {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.content {
+    color: white;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+}
+
+.search {
+    background-color: transparent;
+    width: 25rem;
+    height: 3rem;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    color: white;
+}
+
+.search:hover {
+    background: rgb(0, 255, 29);
+    background: linear-gradient(90deg, rgba(0, 255, 29, 1) 21%, rgba(38, 176, 174, 1) 44%, rgba(55, 196, 23, 1) 83%);
+    color: rgb(0, 0, 0);
+    border: 3px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.signUp {
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 20px;
+    background: rgb(0, 255, 29);
+    background: linear-gradient(90deg, rgba(0, 255, 29, 1) 21%, rgba(38, 176, 174, 1) 44%, rgba(55, 196, 23, 1) 83%);
+    border-radius: 10px;
+    color: white;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    background-image: url(https://i.pinimg.com/736x/44/fe/9c/44fe9c042f39281f4545b60e77c7e38e.jpg);
+    background-color: rgba(0, 0, 0, 0.734);
+    background-blend-mode: color;
+    height: 100vh;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.products {
+    font-size: xx-large;
+    text-decoration: none;
+    color: white;
+}
+
+.products:hover {
+    color: green;
+}
+
+.allProducts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 55px;
+}
+
+.greens {
+    width: 15rem;
+}
+
+.text {
+    position: relative;
+    right: -650px;
+    color: white;
+}
+
+.Text {
+   
+    color: rgb(19, 193, 48);
+}
+
+
+.ourProducts {
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.ourServices {
+    width: 20rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.serviceImg{
+    width: 320px;
+}
+
+.mainServices {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+}
+.pageImg{
+    border-radius: 50px;
+    width: 5rem;
+}
+
+
+.serviceBody{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlKu3Nc4BSVHpjHVb9vSck-5S8yniEIIMgVA&s);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.734);
+    background-blend-mode: color;
+}
+
+.socialMedia{
+    width: 30px;
+}
+
+.contactDiv{
+    width: 20rem;
+    color: white;
+    position: relative;
+    left: 100px;
+    top: 200px;
+    border: 2px solid  rgb(19, 193, 48);
+    border-radius: 10px;
+    padding: 5rem;
+}
+
+input{
+    color: white;
+}
+label{
+    color: white;
+}
+.login{
+position: relative;
+left: 800px;
+top: -160px;
+display: flex;
+flex-direction: column;
+border: 2px solid rgb(19, 193, 48);
+border-radius: 10px;
+width: fit-content;
+padding: 3rem;
+}
+
+.contactBody{
+    background-image: url(https://www.shutterstock.com/image-photo/night-beautiful-abstract-blurred-office-600nw-2413676997.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.734);
+    background-blend-mode: color;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 2rem;
+}
+
+input{
+    padding: 1rem;
+    width: 350px;
+    border-radius: 10px;
+}
+
+label{
+    color:  rgb(19, 193, 48);
+}

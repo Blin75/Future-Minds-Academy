@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .progress-container{
+            width: 300px;
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: green;
+            width: 0;
+            transition: width 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div id="progressBar" class="progressBar" style="width: 0;"></div>
+    </div>
+
+    <script>
+        function isValidPercentage(number) {
+            return number >= 0 && number <= 100;
+        }
+
+        function getProgressColor(percentage) {
+            return percentage < 50 ? 'red' : (percentage < 80 ? 'yellow' : 'green');
+        }
+
+        function modifyProgressBar(percentage, color){
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = percentage + '%';
+            progressBar.style.backgroundColor = color;
+            progressBar.title = percentage + '% Complete';
+        }
+
+        function setProgress(percentage){
+            if(!isValidPercentage(percentage)){
+                console.error('Invalid percentage. percentage must be a number between 0 and 100.');
+                return;
+            }
+
+            const color = getProgressColor(percentage);
+            modifyProgressBar(percentage, color);
+        }
+
+        function uptadeProgressRandomly(){
+            setInterval(function() {
+                const randomPercentage = Math.floor(Math.random() * 101);
+                setProgress(randomPercentage); 
+            }, 2000);
+        }
+
+        uptadeProgressRandomly();
+    </script>
+</body>
+</html>

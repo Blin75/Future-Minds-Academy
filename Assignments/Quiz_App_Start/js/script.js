@@ -117,3 +117,4 @@ function checkAnswer(q, o, opt){
         opt.classList.add('incorrect');
     } 
 }
+// async/await  asyncron javascript

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays Excercises</h1>
+    <div class="showData"></div>
+
+    <script>
+        let showData = document.querySelector('.showData');
+        let students = ['Ridvan Aliu', 41, 'ridvan@edungo.com', 1982];
+
+        let nameSurname = document.createElement('h1');
+        showData.appendChild(nameSurname);
+        nameSurname.textContent = `${students[0]} ${students[1]}`;
+        
+        let age = document.createElement('h2');
+        showData.appendChild(age);
+        age.textContent = `Age: ${students[2]}`;
+
+        let email = document.createElement('h2');
+        showData.appendChild(email);
+        email.textContent = `Email: ${students[3]}`;
+
+        let yearofBirth = document.createElement('h4');
+        showData.appendChild(yearofBirth);
+        yearofBirth.textContent = `Year Born: ${students[4]}`;
+    </script>
+</body>
+</html>

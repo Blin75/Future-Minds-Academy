@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Cards</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .movie-card {
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .movie-card h2 {
+            margin-top: 0;
+        }
+
+        .highest-rated {
+            background-color: #ffc107;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="movie-container" class="container"></div>
+
+
+    <script>
+        let movies = [
+            {
+                name: 'The Godfather',
+                releaseYear: 1972,
+                rating: 9.2,
+                mainActors: ['Marlon Brando', 'Al Pacino', 'James Caan']
+            },
+            {
+                name: 'The Shawshank Redemption',
+                releaseYear: 1994,
+                rating: 9.3,
+                mainActors: ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton']
+            },
+            {
+                name: 'Pulp Fiction',
+                releaseYear: 1994,
+                rating: 8.9,
+                mainActors: ['John Travolta', 'Uma Thurman', 'Samuel L. Jackson']
+            },
+            {
+                name: 'The Dark Knight',
+                releaseYear: 2008,
+                rating: 9.0,
+                mainActors: ['Christian Bale', 'Heath Ledger', 'Aaron Eckhart']
+            },
+            {
+                name: 'Forrest Gump',
+                releaseYear: 1994,
+                rating: 8.8,
+                mainActors: ['Tom Hanks', 'Robin Wright', 'Gary Sinise']
+            }
+        ];
+
+        movies.sort((a, b) => b.rating - a.rating);
+
+
+        const movieContainer = document.getElementById('movie-container');
+
+
+        movies.forEach((movie, index) => {
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+            if (index === 0) {
+                movieCard.classList.add('highest-rated');
+            }
+            movieCard.innerHTML = `
+        <h2>${movie.name}</h2>
+        <p>Release Year: ${movie.releaseYear}</p>
+        <p>Rating: ${movie.rating}</p>
+        <p>Main Actors: ${movie.mainActors.join(', ')}</p>
+    `;
+            movieContainer.appendChild(movieCard);
+        });
+
+    </script>
+</body>
+
+</html>
