@@ -158,6 +158,10 @@ background-color:black ;
     padding: 5rem;
 }
 
+.contactDiv:hover{
+    background-color: black;
+}
+
 input{
     color: white;
 }
@@ -167,13 +171,17 @@ label{
 .login{
 position: relative;
 left: 800px;
-top: -160px;
+top: -230px;
 display: flex;
 flex-direction: column;
 border: 2px solid rgb(19, 193, 48);
 border-radius: 10px;
 width: fit-content;
 padding: 3rem;
+}
+
+.login:hover{
+    background-color: black;
 }
 
 .contactBody{
@@ -196,8 +204,28 @@ input{
     padding: 1rem;
     width: 350px;
     border-radius: 10px;
+    color: black;
 }
 
 label{
     color:  rgb(19, 193, 48);
+}
+
+#phoneNumber{
+    color: rgb(19, 193, 48);
+}
+
+.nextBtn{
+    color: rgb(19, 193, 48);
+    text-decoration: none;
+}
+
+.arrows{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Arrows{
+    position: relative;
+    top: 70px;
 }
