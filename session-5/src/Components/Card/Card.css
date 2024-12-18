@@ -1,0 +1,25 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+}
+
+.card-list li {
+    text-align: left;
+}
