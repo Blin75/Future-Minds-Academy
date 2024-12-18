@@ -1,0 +1,31 @@
+.Card{
+    height: 200px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows:100%;
+    gap: 0.5rem;
+
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 0px #aeaeae55;
+    padding: 1rem;
+}
+
+.Card-Image{
+    max-height: 100%;
+    max-width: 100%;
+
+    object-fit: contain;
+
+}
+
+
+.Card-Header{
+    margin-top: 0;
+}
+
+.Card-SubHeader{
+    margin-top: 0;
+    color: grey;
+}
+

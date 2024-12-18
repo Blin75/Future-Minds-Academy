@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .big {
+            margin: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 4px solid black;
+            border-radius: 20px;
+            background-color: rgb(255, 251, 251);
+        }
+
+        button {
+            margin-top: 3rem;
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: orangered;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        .main {
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .students-list {
+            margin-top: 2rem;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: orangered;
+            border: 3px solid black;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <h1>Implementimi i WEBserverit dhe e-mail serverit</h1>
+        <h1>Lënda: Praktika Profesionale</h1>
+        <h1>Prof: Florim Bajrami</h1>
+        <img width="200px"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX_SDxR1Q-R5VrQuwUH-GdmU48ao5Wfmk9UQ&s" alt="">
+        <div class="main">
+            <div>
+                <button id="showStudents">Nxënësit</button>
+            </div>
+            <div>
+                <button id="showOfertat">Ofertat</button>
+            </div>
+            <div>
+                <button id="showKonfigurimi">Konfigurimi</button>
+            </div>
+        </div>
+        <div class="students-list" id="studentsList"></div>
+    </div>
+    <script>
+        const nxenesit = [
+            {
+                students: [
+                    "Adilon Starabanja - Komunikimi me prof.Florim, ndarja e detyrave, dokumentimi i projektit",
+                    "Blin Agushaj - Implementimi i një WEBserveri",
+                    "Bleon Ferizaj - Implementimi i një email-serveri, publikimi ne internet përmes domain",
+                    "Lorik Rama - Implementimi i një WEBserveri",
+                    "Erblin Dërmaku - Realizimi i projektit me Cisco Packet Tracer",
+                    "Bleron Ajvazi - Gjetja e tre ofertave për blerjen e PC",
+                    "Shaban Bajrami - Gjetja e tre ofertave për blerjen e domain",
+                    "Olti Ferati - Implementimi i një email-serveri",
+                    "Donat Dauti - Instalimi i XAMPP"
+                ]
+            },
+            {
+                ofertat: [
+                    "Adilon Starabanja - Përmes punës",
+                    "Blin Agushaj - Përmes punës",
+                    "Bleon Ferizaj - Përmes kursimeve",
+                    "Lorik Rama - Përmes familjes",
+                    "Erblin Dërmaku - Përmes kursimeve",
+                    "Bleron Ajvazi - Përmes familjes",
+                    "Shaban Bajrami - Përmes kursimeve",
+                    "Olti Ferati - Përmes kursimeve",
+                    "Donat Dauti - Përmes punës"
+                ]
+            },
+            {
+                hapat: [
+                    "1. Hap rolet dhe veçoritë Add Wizard",
+                    "2. Zgjidh llojin e instalimit",
+                    "3. Zgjidh serverin e desƟnacionit",
+                    "4. Zgjidh rolet e serverit",
+                    "5. Zgjidh veçoritë",
+                    "6. Konfirmoni përzgjedhjet e instalimit"
+                ]
+            }
+        ];
+
+        document.getElementById('showStudents').addEventListener('click', () => {
+            const studentsList = document.getElementById('studentsList');
+            studentsList.innerHTML = ''; // Clear any previous list
+            nxenesit[0].students.forEach(student => {
+                const studentItem = document.createElement('p');
+                studentItem.textContent = student;
+                studentsList.appendChild(studentItem);
+            });
+        });
+
+        document.getElementById('showOfertat').addEventListener('click', () => {
+            const studentsList = document.getElementById('studentsList');
+            studentsList.innerHTML = ''; // Clear any previous list
+            nxenesit[1].ofertat.forEach(oferta => {
+                const ofertaItem = document.createElement('p');
+                ofertaItem.textContent = oferta;
+                studentsList.appendChild(ofertaItem);
+            });
+        });
+
+        document.getElementById('showKonfigurimi').addEventListener('click', () => {
+            const studentsList = document.getElementById('studentsList');
+            studentsList.innerHTML = ''; // Clear any previous list
+            nxenesit[2].hapat.forEach(hap => {
+                const hapItem = document.createElement('p');
+                hapItem.textContent = hap;
+                studentsList.appendChild(hapItem);
+            });
+        });
+    </script>
+</body>
+
+</html>
