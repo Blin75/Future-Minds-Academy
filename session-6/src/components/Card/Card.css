@@ -1,0 +1,25 @@
+.Acordion-Card{
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #1a1a1a50;
+    position: relative;
+}
+
+.Acordion-Card-ShowMore{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+.Acordion-Card-Description{
+    display: none;
+}
+
+.Acordion-Card.Open .Acordion-Card-Description{
+    display: block;
+}
+
+.Acordion-Card.Open .Acordion-Card-ShowMore{
+    display: none;
+}
+
