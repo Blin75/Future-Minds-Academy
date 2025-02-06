@@ -205,7 +205,7 @@ iframe {
 }
 
 .rightContainer {
-    background-color: rgb(183, 183, 166);
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/041/713/016/small/ai-generated-abstract-blurred-background-of-modern-office-with-glass-walls-shows-desks-and-chairs-with-computer-free-photo.jpg);
     height: 100vh;
     overflow-y: scroll;
     padding: 0 2rem;
@@ -517,6 +517,17 @@ input:focus {
     -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 0.5rem;
+}
+
+.footerText a{
+    color: white;
+}
+
+.transparent{
+    background-color: transparent;
+    border: 2px solid rgb(0, 0, 0, 0.3);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
 }
 
 @media(max-width:1000px) {
